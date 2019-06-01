@@ -1,4 +1,4 @@
-/* Assignment 3 Evelyn Liu
+/* Evelyn Liu
 October 10, 2018 */
 
 -- Query 1 
