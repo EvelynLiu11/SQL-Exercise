@@ -1,0 +1,9 @@
+/*
+  Use self join to achieve multi-row calculation
+*/
+SELECT A.PLAYER_ID, B.EVENT_DATE, SUM(A.GAMES_PLAYED) AS games_played_so_far
+FROM ACTIVITY A
+JOIN ACTIVITY B
+ON A.PLAYER_ID = B.PLAYER_ID
+AND A.EVENT_DATE <= B.EVENT_DATE
+GROUP BY A.PLAYER_ID, B.EVENT_DATE
